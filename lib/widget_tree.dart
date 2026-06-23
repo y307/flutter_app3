@@ -2,22 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app3/notifiers.dart';
 import 'package:flutter_app3/home_page.dart';
 
+import 'package:flutter_app3/profile_page.dart';
 import 'package:flutter_app3/settings_page.dart';
 import 'package:flutter_app3/navbar_widget.dart';
 
 List<Widget> pages = [HomePage(), ProfilePage()];
-
-// Simple ProfilePage placeholder to resolve missing reference.
-class ProfilePage extends StatelessWidget {
-  const ProfilePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Center(
-      child: Text('Profile Page'),
-    );
-  }
-}
 
 class WidgetTree extends StatelessWidget {
   const WidgetTree({super.key});
