@@ -38,6 +38,23 @@ class _SettingsPageState extends State<SettingsPage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.teal,
+                  foregroundColor: Colors.white,
+                ),
+                onPressed: () {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(
+                      content: Text('Snackbar'),
+                      duration: Duration(seconds: 3),
+                      behavior: SnackBarBehavior.floating,
+                    ),
+                  );
+                },
+                child: Text('Open Snackbar'),
+              ),
+              /////////////////////////
               DropdownButton<String>(
                 value: menuItems,
                 items: [
@@ -77,7 +94,7 @@ class _SettingsPageState extends State<SettingsPage> {
               //////////////////////////
               CheckboxListTile.adaptive(
                 tristate: true,
-                title: Text('Click Me'),
+                title: Text('Check Me'),
                 value: isChecked,
                 onChanged: (bool? value) {
                   setState(() {
@@ -140,22 +157,13 @@ class _SettingsPageState extends State<SettingsPage> {
                 ),
               ),
               /////////////////////////
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.teal,
-                  foregroundColor: Colors.white,
-                ),
-                onPressed: () {},
-                child: Text('Click Me'),
-              ),
-              /////////////////////////
-              ElevatedButton(onPressed: () {}, child: Text('Click Me')),
+              ElevatedButton(onPressed: () {}, child: Text('Click Me 2')),
               ////////////////////////
-              FilledButton(onPressed: () {}, child: Text('Click Me')),
+              FilledButton(onPressed: () {}, child: Text('Click Me 3')),
               ///////////////////////
-              TextButton(onPressed: () {}, child: Text('Click Me')),
+              TextButton(onPressed: () {}, child: Text('Click Me 4')),
               ////////////////////////
-              OutlinedButton(onPressed: () {}, child: Text('Click Me')),
+              OutlinedButton(onPressed: () {}, child: Text('Click Me 5')),
               ///////////////////////
               CloseButton(onPressed: () {}),
               ///////////////////////
