@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'notifiers.dart';
 
 class NavbarWidget extends StatelessWidget {

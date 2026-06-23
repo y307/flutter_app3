@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app3/notifiers.dart';
+import 'notifiers.dart';
+
 
 class SettingsPage extends StatefulWidget {
   const SettingsPage({super.key, required this.title});
@@ -53,6 +54,34 @@ class _SettingsPageState extends State<SettingsPage> {
                   );
                 },
                 child: Text('Open Snackbar'),
+              ),
+              /////////////////////////
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.teal,
+                  foregroundColor: Colors.white,
+                ),
+                onPressed: () {
+                  showDialog(
+                    context: context,
+                    builder: (context) {
+                      return AlertDialog(
+                        title: Text('Alert Dialog'),
+                        content: Text('Alert, alert, alert...'),
+                        actions: [
+                          FilledButton(
+                            onPressed: () {
+                              Navigator.pop(context);
+                            },
+                            child: Text('Close'),
+                          ),
+                        ],
+                      );
+                      // или можно другой диалог: return AboutDialog();
+                    },
+                  );
+                },
+                child: Text('Open Dialog'),
               ),
               /////////////////////////
               DropdownButton<String>(
