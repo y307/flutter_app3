@@ -33,14 +33,14 @@ class WellcomePage extends StatelessWidget {
               //========================
               FilledButton(
                 onPressed: () {
-                  Navigator.pushReplacement(
+                  Navigator.push(
                     context,
                     MaterialPageRoute(
                       builder: (context) {
                         return LoginPage();
                       },
                     ),
-                  ); // Navigator.pushReplacementNamed(context, '/settings');
+                  ); // Navigator.pushNamed(context, '/settings');
                 },
                 style: FilledButton.styleFrom(
                   minimumSize: Size(double.infinity, 40.0),
@@ -49,14 +49,14 @@ class WellcomePage extends StatelessWidget {
               ),
               TextButton(
                 onPressed: () {
-                  Navigator.pushReplacement(
+                  Navigator.push(
                     context,
                     MaterialPageRoute(
                       builder: (context) {
                         return LoginPage();
                       },
                     ),
-                  ); // Navigator.pushReplacementNamed(context, '/settings');
+                  ); // Navigator.pushNamed(context, '/settings');
                 },
                 style: FilledButton.styleFrom(
                   minimumSize: Size(double.infinity, 40.0),
