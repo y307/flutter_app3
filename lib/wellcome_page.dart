@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app3/login_page.dart';
 import 'package:flutter_app3/widget_tree.dart';
 import 'package:flutter_app3/hero_widget.dart';
 
@@ -14,7 +15,7 @@ class WellcomePage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const HeroWidget(),
+              const HeroWidget(title: 'Wellcome',),
               //////////////////////////
               const SizedBox(height: 20),
               //////////////////////////
@@ -37,7 +38,7 @@ class WellcomePage extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                       builder: (context) {
-                        return WidgetTree();
+                        return LoginPage();
                       },
                     ),
                   ); // Navigator.pushReplacementNamed(context, '/settings');
@@ -53,7 +54,7 @@ class WellcomePage extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                       builder: (context) {
-                        return WidgetTree();
+                        return LoginPage();
                       },
                     ),
                   ); // Navigator.pushReplacementNamed(context, '/settings');
