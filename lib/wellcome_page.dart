@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app3/login_page.dart';
-import 'package:flutter_app3/widget_tree.dart';
 import 'package:flutter_app3/hero_widget.dart';
 
 class WellcomePage extends StatelessWidget {
@@ -16,9 +15,9 @@ class WellcomePage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const HeroWidget(title: 'Wellcome',),
-              //////////////////////////
+              //=========================
               const SizedBox(height: 20),
-              //////////////////////////
+              //=========================
               FittedBox(
                 child: Text(
                   'Flutter Mapp',
@@ -29,9 +28,9 @@ class WellcomePage extends StatelessWidget {
                   ),
                 ),
               ),
-              /////////////////////
+              //========================
               const SizedBox(height: 20),
-              //////////////////////////
+              //========================
               FilledButton(
                 onPressed: () {
                   Navigator.pushReplacement(
