@@ -18,6 +18,19 @@ class WellcomePage extends StatelessWidget {
               //////////////////////////
               const SizedBox(height: 20),
               //////////////////////////
+              FittedBox(
+                child: Text(
+                  'Flutter Mapp',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 50,
+                    letterSpacing: 50,
+                  ),
+                ),
+              ),
+              /////////////////////
+              const SizedBox(height: 20),
+              //////////////////////////
               FilledButton(
                 onPressed: () {
                   Navigator.pushReplacement(
@@ -29,6 +42,25 @@ class WellcomePage extends StatelessWidget {
                     ),
                   ); // Navigator.pushReplacementNamed(context, '/settings');
                 },
+                style: FilledButton.styleFrom(
+                  minimumSize: Size(double.infinity, 40.0),
+                ),
+                child: const Text('Get Started'),
+              ),
+              TextButton(
+                onPressed: () {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return WidgetTree();
+                      },
+                    ),
+                  ); // Navigator.pushReplacementNamed(context, '/settings');
+                },
+                style: FilledButton.styleFrom(
+                  minimumSize: Size(double.infinity, 40.0),
+                ),
                 child: const Text('Login'),
               ),
             ],
